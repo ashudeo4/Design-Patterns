@@ -1,0 +1,3 @@
+class GoodsVechicle extends Vehicle{
+    
+}

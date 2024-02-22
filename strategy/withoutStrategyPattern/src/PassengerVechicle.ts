@@ -1,0 +1,3 @@
+class PassengerVehicle extends Vehicle {
+    
+}
