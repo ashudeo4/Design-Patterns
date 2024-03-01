@@ -1,0 +1,3 @@
+interface NotificationAlertObserver {
+    update(): void;
+}
