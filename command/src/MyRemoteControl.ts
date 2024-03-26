@@ -1,6 +1,7 @@
 //Invoker
 export class MyRemoteControl {
     command: ICommand;
+    acCommandHistory:ICommand[] = [];
 
     constructor() {
 
@@ -10,11 +11,19 @@ export class MyRemoteControl {
         this.command = command;
     }
 
-    pressButton() {
+    pressButton(): void {
         this.command.execute();
+        this.acCommandHistory.push(this.command);
     }
 
-    setTemperature(temperature :number) {
+    setTemperature(temperature :number): void {
         this.command.setTemperature(temperature);
+    }
+
+    undo(): void {
+        if (this.acCommandHistory.length) {
+            let lastCommand: ICommand = this.acCommandHistory.pop();
+            lastCommand.undo();
+        }
     }
 }

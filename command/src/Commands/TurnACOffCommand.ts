@@ -12,6 +12,10 @@ export class TurnACOffCommand implements ICommand {
     execute(): void {
         this.ac.turnOffAc();
     }
+
+    undo(): void {
+        this.ac.turnOnAc();
+    }
     
     
 }

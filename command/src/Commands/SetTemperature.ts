@@ -6,6 +6,9 @@ export class SetTemperature implements ICommand {
     constructor(ac: AirConditioner) {
         this.ac = ac;
     }
+    undo(): void {
+        throw new Error("Method not implemented.");
+    }
     execute(): void {
         throw new Error("Method not implemented.");
     }

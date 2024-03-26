@@ -8,6 +8,7 @@ let remoteObj: MyRemoteControl = new MyRemoteControl();
 
 remoteObj.setCommand(new TurnACOnCommand(airConditioner));
 remoteObj.pressButton();
+remoteObj.undo();
 
 remoteObj.setCommand(new SetTemperature(airConditioner));
 remoteObj.setTemperature(20);
